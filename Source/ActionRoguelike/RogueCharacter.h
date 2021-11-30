@@ -28,6 +28,9 @@ public:
 
 protected:
 	void MoveForward(float Value);
+	void MoveRight(float Value);
+
+	void PrimaryAttack();
 	
 protected:
 	UPROPERTY(VisibleAnywhere)
@@ -35,4 +38,7 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* CameraComp;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AActor> ProjectileClass;
 };
